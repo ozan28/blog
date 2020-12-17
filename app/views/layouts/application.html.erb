@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sayfa</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false">
+      <span class="sr-only">toogle</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+          <a class="navbar-brand" href="#"><strong>BLOG</strong></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <%= link_to "Bilgiler", home_path %>
+            </li>
+          </ul>
+           <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to "Bilgi Ekle", new_post_path %>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+       
+
+<div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>

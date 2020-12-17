@@ -1,0 +1,24 @@
+<style type="text/css">
+	.sol img{object-fit:cover}
+}
+</style>
+<div id="sol" style="float: left;width: 50%;height: 200px;background-image: url(https://www.tazecicek.com/medya/image/5b7b06c7593cf43522184a6dd9b2f0ca.jpg); background-size:contain;">
+</div>
+<div id=sağ style="float: left;width: 50%;height: 200px;">
+	<p><center><strong><font face="Helvetica" color="red">Lotus Çiçeği</font></strong></center></p>
+	<font face="Times New Roman">Lotus çiçeği kirli sularda yetişir. Bulunduğu sular bulanık ve koyu renklidir. Bataklıklar ve sulak alanlar yetişme alanlarıdır. Ancak Lotus en temiz bitkidir ve kirlilikten etkilenmez. Yapraklarının yapısı gereği toz tutmaz ve en ufak bir yağmur damlası ile bile kendini temizleyebilir. Lotus çiçeğinden esinlenerek yapılan dış mekan kaplama sistemleri ve boyalar vardır. Bu yapılar kendi kendilerini temizleyebilecek şekilde dizayn edilmişlerdir. Aynı lotus çiçeğinini doğal yapısı gibi…</font>
+
+</div>
+<div id="icerik" style="width: 100%;height: 700px;">
+	<div id="s" style="width: 50%;height: 250px;">
+	
+	</div>
+	<% @posts.each do |post| %>
+<div class="well">
+	<h3><%= post.title %></h3>
+	<p><%= post.body %> </p>
+	<%= link_to "Read More",post_path(post),:class => 'btn btn-default' %>
+	</div>
+<% end %>
+</div>
+
